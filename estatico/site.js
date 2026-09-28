@@ -256,6 +256,8 @@
     if (cfg.formularioDestino) {
       var botao = form.querySelector("button[type='submit']");
       botao.disabled = true;
+      // o app da Web do Google leva alguns segundos (medido: cerca de 6 s em 28/09/2026); sem isto a página parece parada
+      mostrar([el("p", "Enviando...")]);
       fetch(cfg.formularioDestino, {
         method: "POST",
         // text/plain evita a consulta prévia de CORS, que o script do Google (Apps Script) não responde
