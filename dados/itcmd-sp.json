@@ -1,0 +1,41 @@
+{
+ "fonte": {
+  "titulo": "ITCMD em São Paulo: alíquota, multa por atraso na abertura do inventário, vencimento e redução",
+  "conferido_em": "2026-09-27",
+  "fontes": [
+   {"o_que": "Lei estadual 10.705/2000 (texto consolidado com a Lei 10.992/2001), arts. 6º, 16, 17, 19, 20 e 21", "url": "https://www.pge.sp.gov.br/Contencioso/LEI%2010705.htm"},
+   {"o_que": "Manual ITCMD, Transmissão Causa Mortis, Transmissão por Escritura Pública, p. 8, nota 2 (tabela da multa por dias entre o óbito e a protocolização)", "url": "https://www10.fazenda.sp.gov.br/ITCMD_DEC/Manuais/ManualEscrituraPublica.pdf"},
+   {"o_que": "Guia da Sefaz-SP para a transmissão causa mortis por escritura pública", "url": "https://portal.fazenda.sp.gov.br/servicos/itcmd/Paginas/gu---transmiss%C3%A3o-causa-mortis-por-escritura-p%C3%BAblica.aspx"},
+   {"o_que": "Perguntas frequentes da Sefaz-SP sobre o ITCMD, itens 134 (redução de 5% em 90 dias, Decreto 46.655/2002, art. 31, § 1º, 2), 152 (o que conta como abertura no inventário por escritura) e 153 (vencimento em 180 dias)", "url": "https://portal.fazenda.sp.gov.br/servicos/itcmd"},
+   {"o_que": "UFESP de 2026: R$ 38,42 (Comunicado DICAR 88/2025)", "url": "https://portal.fazenda.sp.gov.br/"}
+  ]
+ },
+ "aliquota": 0.04,
+ "aliquota_norma": "Lei 10.705/2000, art. 16 (redação da Lei 10.992/2001)",
+ "aliquota_valida_para_obitos_desde": "2002-01-01",
+ "aliquota_nota": "A Lei 10.992/2001, que fixou a alíquota única de 4%, produz efeitos desde 1º/01/2002. Óbitos anteriores seguem a redação original da Lei 10.705/2000, que esta calculadora não cobre.",
+ "multa_abertura": {
+  "norma": "Lei 10.705/2000, art. 21, I; contagem conforme o manual da Sefaz-SP para escritura pública",
+  "regras": [
+   {"ate_dias": 60, "percentual": 0.0},
+   {"ate_dias": 180, "percentual": 0.10},
+   {"ate_dias": null, "percentual": 0.20}
+  ],
+  "o_que_conta_como_abertura": "No inventário por escritura, a data da escritura de nomeação de inventariante ou a data de confirmação da declaração do ITCMD, a que vier primeiro (Sefaz-SP, pergunta frequente 152)."
+ },
+ "vencimento_dias": 180,
+ "vencimento_norma": "Lei 10.705/2000, art. 17, § 1º; Sefaz-SP, pergunta frequente 153",
+ "atraso_no_pagamento": "Pago depois do vencimento, o imposto tem juros (art. 20) e multa de mora de 0,33% por dia, limitada a 20% (art. 19), que a calculadora não inclui.",
+ "reducao_pagamento_antecipado": {"dias": 90, "percentual": 0.05, "norma": "Decreto estadual 46.655/2002, art. 31, § 1º, item 2"},
+ "ufesp_2026": 38.42,
+ "isencoes_causa_mortis": {
+  "norma": "Lei 10.705/2000, art. 6º, I",
+  "itens": [
+   {"alinea": "a", "texto": "imóvel de residência, urbano ou rural, de valor até 5.000 UFESPs, se os familiares beneficiados nele residirem e não tiverem outro imóvel", "ufesps": 5000},
+   {"alinea": "b", "texto": "imóvel de valor até 2.500 UFESPs, desde que seja o único transmitido", "ufesps": 2500},
+   {"alinea": "c", "texto": "bens móveis que guarnecem esses imóveis (ferramentas agrícolas, roupas, aparelhos domésticos e outros de pequeno valor), até 1.500 UFESPs no total", "ufesps": 1500},
+   {"alinea": "d", "texto": "depósitos bancários e aplicações financeiras de valor total até 1.000 UFESPs", "ufesps": 1000},
+   {"alinea": "e", "texto": "valores devidos pelo empregador ou por instituto de previdência, verbas alimentares reconhecidas em processo judicial e saldos de FGTS e PIS-Pasep, não recebidos em vida", "ufesps": null}
+  ]
+ }
+}

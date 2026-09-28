@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90">
+<path d="M0 30 L30 60 L0 90 Z" fill="#9b9391"/>
+<path d="M30 0 L60 30 L30 60 L0 30 Z" fill="#b9b3b1"/>
+<path d="M60 30 L90 60 L60 90 L30 60 Z" fill="#d6d2d1"/>
+<text x="30" y="40" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#ffffff">S</text>
+<text x="60" y="70" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#ffffff">P</text>
+</svg>
