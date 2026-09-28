@@ -486,6 +486,8 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--al
 .aviso-privacidade { font-size: 0.98rem; color: var(--tinta-suave); margin: 0.25rem 0 0; }
 .formulario .botao { justify-self: start; }
 .formulario-retorno:empty { display: none; }
+/* armadilha contra robô: pessoa não vê nem alcança pelo teclado; robô que preenche tudo se denuncia */
+.campo-armadilha { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .formulario-retorno {
   background: var(--papel);
   border: 1px solid var(--nevoa);

@@ -95,9 +95,9 @@
     });
     try {
       if (navigator.sendBeacon) {
-        navigator.sendBeacon(cfg.eventosDestino, new Blob([dados], { type: "application/json" }));
+        navigator.sendBeacon(cfg.eventosDestino, new Blob([dados], { type: "text/plain;charset=utf-8" }));
       } else {
-        fetch(cfg.eventosDestino, { method: "POST", headers: { "Content-Type": "application/json" }, body: dados, keepalive: true });
+        fetch(cfg.eventosDestino, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: dados, keepalive: true });
       }
     } catch (e) { /* o registro nunca impede o contato */ }
   }
@@ -230,6 +230,11 @@
       origem: window.SPOrigem(),
       enviado_em: new Date().toISOString()
     };
+    if (valor("site")) { // armadilha preenchida: robô. Finge que foi e não manda nada.
+      form.reset();
+      mostrar([el("p", "Mensagem enviada. A resposta vem pelo canal que você indicou.")]);
+      return;
+    }
     var ok = true;
     if (!dados.nome) { marcarErro("nome", "Escreva seu nome."); ok = false; }
     if (!dados.contato) {
@@ -253,7 +258,8 @@
       botao.disabled = true;
       fetch(cfg.formularioDestino, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        // text/plain evita a consulta prévia de CORS, que o script do Google (Apps Script) não responde
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
         body: JSON.stringify(dados)
       }).then(function (r) {
         if (!r.ok) throw new Error("status " + r.status);
