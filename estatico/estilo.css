@@ -248,6 +248,12 @@ strong { font-weight: 600; }
   margin-bottom: 1.25rem;
 }
 .caminho a { color: var(--tinta-suave); }
+.atualizado {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--tinta-suave);
+  margin-top: -0.5rem;
+}
 
 .nota {
   background: var(--papel-cinza);
