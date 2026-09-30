@@ -163,7 +163,7 @@
     }
   }
 
-  var ROTULOS = { inventario: "inventário", divorcio: "divórcio ou fim de união estável", outro: "outro assunto" };
+  var ROTULOS = { inventario: "inventário", divorcio: "divórcio ou fim de união estável", marca: "registro de marca", outro: "outro assunto" };
   function assuntoLegivel(dados) {
     return ROTULOS[dados.assunto] || dados.assunto_pagina || "um atendimento";
   }
