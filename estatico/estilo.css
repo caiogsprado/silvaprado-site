@@ -125,10 +125,10 @@ a:hover { color: var(--pedra-escura); text-decoration-color: currentColor; }
   margin: 0;
   padding: 0;
 }
-.menu ul { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.menu ul { display: flex; gap: 1.1rem; flex-wrap: wrap; }
 .menu a, .menu-movel a {
   font-family: var(--sans);
-  font-size: 0.98rem;
+  font-size: 0.92rem;
   color: var(--tinta-suave);
   text-decoration: none;
 }
